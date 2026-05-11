@@ -21,4 +21,12 @@ To download:
 To use:
 - Simply include the `TM1637Display.h` header file in your code.
 
+## Tasks
+See the to-do items in the `timer.ino` file to get it to work.
 
+Extension tasks:
+- Connect a button for resetting the timer:
+	- Use what you learnt in the logic gates project to help you take user input from a push button.
+
+Stretch goal:
+- Convert it to count-down timer, allowing the user to input a time to count down from.

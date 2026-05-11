@@ -1,3 +1,5 @@
+// Complete the TODO items on lines 28 & 55
+
 #include "TM1637Display.h"
 
 // Pins connected to data & clock pins on display
@@ -23,12 +25,12 @@ unsigned long timeElapsed() {
 
 // Generates a 4-digit number representing the minutes & seconds since the timer started.
 int createDisplayNumber(unsigned long timeMS) {
-  int timeSecs = timeMS / 1000;
-
-  int secs = timeSecs % 60;
-  int mins = timeSecs / 60;
-
-  return mins * 100 + secs;
+  // TODO: Write code to generate the number used by the library for setting the content of the display.
+  // Format:
+  // - A single 4-digit (or less) integer.
+  // - Order of digits is same as it is visually on the board.
+  // - If a number with less then 4 digits is used, it will be displayed on the right digits of the display.
+  // Hint: Use divide & modulo operators to get minutes & seconds :D
 }
 
 // Arduino start-up function
@@ -49,7 +51,10 @@ void loop() {
   // If display number has changed, update the display
   if (displayNum != lastDisplayNum) {
     lastDisplayNum = displayNum;
-    display.showNumberDecEx(displayNum, 0b01000000, true);
+    
+    // TODO: Write the number to the display.
+    // Use display.showNumberDecEx()
+    // Read "TM1637Display.h" in the library zip
   }
 
   // Wait before checking time elapsed again
