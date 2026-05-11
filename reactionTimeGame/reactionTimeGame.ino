@@ -2,8 +2,8 @@
 
 #define DISPLAY_PIN_CLK 2
 #define DISPLAY_PIN_DIO 3
-#define PLAYER_PIN_A 4
-#define LED_PIN 5
+#define PLAYER_PIN_A 7
+#define LED_PIN 6
 
 #define DELAY_MIN_MS 5000
 #define DELAY_MAX_MS 10000
