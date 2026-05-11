@@ -36,18 +36,23 @@ void setup() {
 }
 
 void loop() {
-  if (nextTriggerTime <= millis()){
-    digitalWrite(LED_PIN, HIGH);
-    if (digitalRead(PLAYER_PIN_A)==HIGH){
-      int speed = (millis() - nextTriggerTime);
+  //If the current time is greater than or equal to the next trigger time - replace question mark!
+  if (?){
+    //Turn on the LED - fill in the line!
+    ?
+    //If the button is pressed - replace the question mark!
+    if (?){
+      //Work out how many ms have passed - replace the question mark!
+      int speed = ?;
       display.showNumberDecEx((speed<9999?speed:0000), 0b00000000, true);
       delay(1000);
       while (digitalRead(PLAYER_PIN_A)==LOW){
         delay(10);
       }
-      digitalWrite(LED_PIN, LOW);
-      display.clear();
-      newRandomTriggerTime();
+      //Turn off the LED, clear the display, and generate a new trigger time - fill in next 3 lines!
+      ?
+      ?
+      ?
     }
   }
   delay(1);
