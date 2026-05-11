@@ -11,13 +11,17 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  //reads both pins, storing either HIGH or LOW in a variable
   buttonAState = digitalRead(BUTTON_A);
   buttonBState = digitalRead(BUTTON_B);
+  //if both buttons are high, our AND gate is true!
   if (buttonAState == HIGH && buttonBState == HIGH){
+    //So we turn on the LED by writing HIGH to that pin
     digitalWrite(LED, HIGH);
   }
   else{
+    //otherwise we turn it off!
     digitalWrite(LED, LOW);
   }
 }
+
