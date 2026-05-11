@@ -1,6 +1,6 @@
-#define BUTTON_A 7
-#define BUTTON_B 6
-#define LED 8
+#define BUTTON_A 8
+#define BUTTON_B 7
+#define LED 6
 int buttonAState=0, buttonBState =0;
 
 void setup() {
