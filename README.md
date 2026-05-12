@@ -1,5 +1,6 @@
 # CompSoc Arduino Workshop
 This repo contains materials for the CompSoc Arduino workshop, ran on 12/05/2026.
+See `Intro to Arduinos.pdf` for the slides, containing useful info for getting started on the projects.
 
 It contains 4 mini-projects:
 1. Logic gates (andGate)
