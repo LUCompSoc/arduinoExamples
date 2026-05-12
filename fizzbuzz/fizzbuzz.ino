@@ -38,7 +38,7 @@ void writeDigitPins(bool stateA, bool stateB, bool stateC, bool stateD, bool sta
   digitalWrite(C, stateC ? LOW : HIGH);
   digitalWrite(D, stateD ? LOW : HIGH);
   digitalWrite(E, stateE ? LOW : HIGH);
-  digitalWrite(F,    ? LOW : HIGH);
+  digitalWrite(F, stateF ? LOW : HIGH);
   digitalWrite(G, stateG ? LOW : HIGH);
   digitalWrite(DP, stateDP ? LOW : HIGH);
 }
@@ -114,17 +114,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int i;
-  for(i=1; i<=10; ++i)
-  {
-    if (i % 5 == 0 && i % 3 == 0)
-      writeDigit(13,true);
-    else if (i % 3 == 0)
-      writeDigit(11,true);
-    else if (i % 5 == 0)
-      writeDigit(12, true);
-    else if ((i % 3 != 0) && (i % 5 != 0))
-      writeDigit(i,false);
-    delay(1000);
-  }
+
+  //This is how you write the digit 1:
+  writeDigit(1,true);
+  //use delay(int ms) to make the arduino wait
+  delay(1000);
+  //Try your hand at recreating the fizzbuz algorithm!
 }

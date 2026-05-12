@@ -14,24 +14,25 @@ int nextTriggerTime = 0;
 
 
 void newRandomTriggerTime() {
+  // Set next trigger time to current time + some random number of milliseconds
   nextTriggerTime = millis() + random(DELAY_MIN_MS, DELAY_MAX_MS);
-  Serial.print("Will trigger in: ");
-  Serial.print(nextTriggerTime - millis());
-  Serial.println("ms");
 }
 
 void setup() {
-  // Configure serial
-  Serial.begin(9600);
+  // Configure serial (uncomment the next line if you want to use serial for debugging)
+  // Serial.begin(9600);
+
   // Configure display
   display.clear();
   display.setBrightness(7);
-  randomSeed(analogRead(0));
-  // Configure LED pin
+
+  // Configure LED & button pins
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);
   pinMode(PLAYER_PIN_A, INPUT);
-  // Set a new random trigger time for the LED
+
+  // Set random seed and next trigger time
+  randomSeed(analogRead(0));
   newRandomTriggerTime();
 }
 
@@ -43,8 +44,8 @@ void loop() {
     //If the button is pressed - replace the question mark!
     if (?){
       //Work out how many ms have passed - replace the question mark!
-      int speed = ?;
-      display.showNumberDecEx((speed<9999?speed:0000), 0b00000000, true);
+      int timeTaken = ?;
+      display.showNumberDecEx((timeTaken<9999?timeTaken:0000), 0b00000000, true);
       delay(1000);
       while (digitalRead(PLAYER_PIN_A)==LOW){
         delay(10);

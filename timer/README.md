@@ -1,32 +1,16 @@
-# Arduino Timer
-This project uses an Arduino to control a 4-digit display through a separate chip.
+# Simple Timer
+This is a simple timer created with the Arduino & external display.
 
-Interfacing with external chips can be quite hard to wrap your head around. While it is a good learning experience to do it yourself, there are often libraries that do the heavy lifting for you.
+For info on using the library, see the README.md file in the root of the repo.
 
-For this session, we will use this open source library:
-- https://github.com/avishorp/TM1637/
-
-Product codes:
-- Display - 3542BS-7.3P
-- Driver chip - TM1637
-
-## Downloading the Library
-To download:
-1. Download the zip file from the latest release in the releases section on the GitHub page: https://github.com/avishorp/TM1637/releases/tag/v1.2.0
-2. Import the library using the Arduino IDE:
-	1. Go to `Sketch > Include Library > Add .ZIP Library`
-	2. Select the `.zip` file you just downloaded
-	3. It should show `Library installed` in the Output window
-
-To use:
-- Simply include the `TM1637Display.h` header file in your code.
-
-## Tasks
-See the to-do items in the `timer.ino` file to get it to work.
+Tasks:
+- Complete the to-do items in the `timer.ino` file to get it to work.
 
 Extension tasks:
-- Connect a button for resetting the timer:
+- Make it so you can pause & unpause the timer by pressing a button.
 	- Use what you learnt in the logic gates project to help you take user input from a push button.
+- Add another button to allow you to reset the timer.
 
 Stretch goal:
 - Convert it to count-down timer, allowing the user to input a time to count down from.
+- When the timer counts down to 0, start flashing an LED until a button is pressed (like a visual alarm).
