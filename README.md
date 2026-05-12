@@ -33,3 +33,10 @@ The code for each mini-project is mostly complete.
 Some of the mini-projects have missing code which you have to fill in.
 
 If you need any help, feel free to call us over!
+
+## Arduino IDE on Linux
+You may have the issue where you don't have read / write permissions on the Arduino every time you plug it in.
+
+You can fix this by making a `udev` rule:
+- Create a rule file: `/etc/udev/rules.d/10-arduino.rules`
+- Write into the file: `SUBSYSTEM=="tty", ATTRS{manufacturer}=="Arduino*", MODE="0666"`
