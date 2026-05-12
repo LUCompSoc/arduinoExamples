@@ -116,7 +116,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   //This is how you write the digit 1:
-  writeDigit(1,true);
+  // writeDigit(1,true);
   //use delay(int ms) to make the arduino wait
   delay(1000);
   //Try your hand at recreating the fizzbuz algorithm!

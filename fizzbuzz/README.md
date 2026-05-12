@@ -1,6 +1,7 @@
 # FizzBuzz
-A simple, fun fizzbuzz game using the 4-digit display talked about in root README.md.
+A simple, fun FizzBuzz game using a 7-segment display.
 
-Your task is to finish it!
+Your task is to finish the code!
+See slides 17-19 in [Intro to Arduinos.pdf](/Intro%20to%20Arduinos.pdf) for more info, including tasks & extensions you can complete.
 
-Enjoy :D
+We hope you enjoy :D

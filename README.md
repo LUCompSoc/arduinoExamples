@@ -1,14 +1,18 @@
 # CompSoc Arduino Workshop
 This repo contains materials for the CompSoc Arduino workshop, ran on 12/05/2026.
-See `Intro to Arduinos.pdf` for the slides, containing useful info for getting started on the projects.
+See `Intro to Arduinos.pdf` for the session slides, containing useful info for getting started on the projects.
 
-It contains 4 mini-projects:
+There are 4 mini-projects:
 1. Logic gates (andGate)
-2. FizzBuzz (fizzbuzzSmaple)
+2. FizzBuzz (fizzbuzz)
 3. Timer (timer)
 4. Reaction time game (reactionTimeGame)
 
-Projects 1, 2 & 3 were made by @LaurenceRichardson, and project 4 was made by @cottondell.
+See end of README for credits.
+
+## Tasks
+The code for each mini-project is mostly complete, with some of them having missing code which you have to fill in.
+See the slides, as well as the README file in each project's folder, for more info.
 
 ## TM1637 Library
 Projects 3 & 4 use a 4-digit display, controlled by the TM1637 micro-controller.
@@ -26,17 +30,24 @@ Installing the libary:
 	3. It should show `Library installed` in the Output window
 
 Using the library:
-- Simply include the `TM1637Display.h` header file in your code.
-
-## Tasks
-The code for each mini-project is mostly complete.
-Some of the mini-projects have missing code which you have to fill in.
-
-If you need any help, feel free to call us over!
+- Simply include the `"TM1637Display.h"` header file in your code.
+- Note, it may automatically include `<TM1637.h>`, but this doesn't work for me - use the include above instead.
 
 ## Arduino IDE on Linux
-You may have the issue where you don't have read / write permissions on the Arduino every time you plug it in.
+You may have the issue where you don't have read / write permissions on the Arduino whenever you plug it in.
 
 You can fix this by making a `udev` rule:
 - Create a rule file: `/etc/udev/rules.d/10-arduino.rules`
 - Write into the file: `SUBSYSTEM=="tty", ATTRS{manufacturer}=="Arduino*", MODE="0666"`
+
+## Credits
+[@LaurenceRichardson](https://github.com/LaurenceRichardson)
+- Slides
+- Projects 1, 2 & 4
+
+[@cottondell](https://github.com/cottondell)
+- Project 3
+- README files
+
+[@Tyloxon](https://github.com/Tyloxon)
+- Project 2

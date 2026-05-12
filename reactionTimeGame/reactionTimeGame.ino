@@ -10,7 +10,7 @@
 
 // Global variables
 TM1637Display display(DISPLAY_PIN_CLK, DISPLAY_PIN_DIO);
-int nextTriggerTime = 0;
+unsigned long nextTriggerTime = 0;
 
 
 void newRandomTriggerTime() {
@@ -38,23 +38,30 @@ void setup() {
 
 void loop() {
   //If the current time is greater than or equal to the next trigger time - replace question mark!
-  if (?){
+  if (?) {
     //Turn on the LED - fill in the line!
     ?
+
     //If the button is pressed - replace the question mark!
-    if (?){
+    if (?) {
       //Work out how many ms have passed - replace the question mark!
       int timeTaken = ?;
-      display.showNumberDecEx((timeTaken<9999?timeTaken:0000), 0b00000000, true);
+
+      // Display the number on the screen (don't replace this question mark)
+      display.showNumberDecEx((timeTaken < 9999 ? timeTaken : 0000), 0b00000000, true);
       delay(1000);
-      while (digitalRead(PLAYER_PIN_A)==LOW){
+
+      // Wait until user releases button
+      while (digitalRead(PLAYER_PIN_A) == LOW) {
         delay(10);
       }
+
       //Turn off the LED, clear the display, and generate a new trigger time - fill in next 3 lines!
       ?
       ?
       ?
     }
   }
+
   delay(1);
 }
